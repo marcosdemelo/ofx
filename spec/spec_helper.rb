@@ -8,3 +8,7 @@ RSpec::Matchers.define :have_key do |key|
     hash.keys.include?(key)
   end
 end
+
+RSpec.configure do |c|
+  c.filter_run_when_matching :focus
+end
